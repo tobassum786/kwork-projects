@@ -14,6 +14,7 @@
     margin: 0;
     font-family: 'DMSans', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,6 +89,10 @@ header {
 }
 
 .navbar .navbar-items .nav-item:hover {
+    color: var(--sec-color);
+}
+
+.active {
     color: var(--sec-color);
 }
 
@@ -436,13 +441,13 @@ header {
     background: -webkit-linear-gradient(var(--sec-color), var(--font-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 8px #7f6400);
 }
 
 .academy-cards .card-body .title::before {
     content: attr(data-heading);
     display: block;
     font-size: 22px;
-    text-shadow: -5px -2px 10px rgba(120, 95, 0, 1), -7px 1px 11px rgba(35, 75, 78, 1);
     text-transform: uppercase;
     padding-bottom: -10px;
     color: var(--sec-color);
@@ -601,8 +606,8 @@ footer {
 
 /*===responsive------------=====*/
 @media (max-width: 991px) {
-    html {
-        width: 100%;
+    body {
+        width: 100% auto;
         box-sizing: border-box;
     }
 
@@ -611,6 +616,8 @@ footer {
     }
     
     header {
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
@@ -641,6 +648,10 @@ footer {
         line-height: 2;
     }
     
+    .navbar #menu li a:hover {
+        color: var(--sec-color);
+    }
+    
     .navbar {
         padding: 10px 30px;
         margin: 0;
@@ -659,6 +670,8 @@ footer {
 
     .burer-menu.active {
         background: url(images/icons/close.png);
+        width: 40px;
+        height: 40px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 25px;
@@ -708,7 +721,7 @@ footer {
 
     .benefits-content-faq .content-container,
     .benefits-content-faq .benefit-container {
-        width: 100%;
+        width: 80%;
         margin-bottom: 80px;
         display: flex;
         flex-flow: column wrap;
@@ -721,12 +734,17 @@ footer {
         align-items: center;
         flex-wrap: wrap;
     }
+    
+    .nftv-join-acadmey .nftive-main-container .nftive-container {
+        width: 80%;
+        display: none;
+    }
 }
 
 
 @media (max-width: 640px) {
     body {
-        width: 100%;
+        width: 100% auto;
     }
 
     .section {
@@ -741,6 +759,11 @@ footer {
         width: 100%;
         padding: 10px;
     }
+    
+    #menu {
+        width: 100%;
+        left: -640px;
+    }
 
     .banner p,
     .banner .banner-heading {
@@ -748,15 +771,23 @@ footer {
         margin: 0;
     }
     
-    header,
-    .navbar {
+    header {
         width: 100%;
-        padding: 10px;
+        padding: 0;
         margin: 0;
+    }
+    
+    .navba{
+        padding: 10px;
     }
 
     .logo {
         padding: 10px;
+    }
+    
+    .nftv-join-acadmey .nftive-main-container .nftive-container {
+        width: 80%;
+        display: none;
     }
 
 }
@@ -777,6 +808,11 @@ footer {
         height: 25vh;
         width: 100%;
         padding: 10px;
+    }
+    
+    #menu {
+        width: 100%;
+        left: -414px;
     }
 
     .banner p,
@@ -860,6 +896,11 @@ footer {
 
     .benefits-content-faq .content-container .faq-container {
         width: 100%;
+    }
+    
+    .nftv-join-acadmey.nftive-main-container .nftive-container {
+        width: 80%;
+        display: none;
     }
 
     footer {
