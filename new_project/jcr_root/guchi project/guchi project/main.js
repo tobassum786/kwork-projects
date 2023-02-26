@@ -8,17 +8,24 @@ function toggleMenu() {
 }
 
 
+//active-item-navbar
+//
+//const navIems = document.getElementsByClassName("nav-item");
+//
+//for(var i=0; i<navIems.length; i++){
+//    navIems[i].addEventListener('click', () =>{
+//        this.classList.add("active")
+//    })
+//}
 
-var btnContainer = document.getElementsByClassName("navbar-items");
-
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("nav-item");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+var links = document.querySelectorAll('.navbar ul li a');
+links.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    // PreventDefault to prevent redirect
+    e.preventDefault();
+    links.forEach(function (element) {
+      element.classList.remove('active');
     });
-}
+    this.classList.add('active');
+  });
+});

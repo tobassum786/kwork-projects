@@ -66,9 +66,13 @@ header {
 }
 
 .navbar .navbar-items .nav-item {
+    color: var(--font-color);
+}
+
+.navbar .navbar-items .nav-item {
     margin-left: 16px;
     font-size: 13px;
-    color: var(--font-color);
+    
 }
 
 .navbar .navbar-items li:nth-child(1) {
@@ -92,11 +96,8 @@ header {
     color: var(--sec-color);
 }
 
-.active {
-    color: var(--sec-color);
-}
 
-.banner {
+ .banner {
     position: relative;
     background: url(images/header.png);
     width: 100%;
@@ -316,6 +317,7 @@ header {
     flex-direction: column;
     padding: 5px;
     margin-top: 20px;
+    transition: .10s;
 }
 
 .faq-container .drop-btn {
@@ -328,14 +330,14 @@ header {
     border: none;
     font-size: 18px;
     color: var(--sec-color);
-    transition: 2s;
+    transition: .10s;
     
 }
 
 .faq-container .drop-down:hover .faq-items {
     display: block;
     cursor: pointer;
-    transition: .2s;
+    transition: .10s;
 }
 
 .faq-container .drop-down {
@@ -348,7 +350,7 @@ header {
     width: 100%;
     font-size: 13px;
     margin-bottom: 10px;
-    transition: .2s;
+    transition: .10s;
 }
 
 .faq-container .drop-down h4 {
@@ -416,7 +418,7 @@ header {
     border-radius: 50px;
     margin: 10px;
     padding: 3px;
-    background: linear-gradient(0deg, var(--base-color), var(--font-color));
+    background: linear-gradient(0deg, var(--base-color) 15%, var(--font-color));
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -441,7 +443,7 @@ header {
     background: -webkit-linear-gradient(var(--sec-color), var(--font-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 0px 8px #7f6400);
+    filter: drop-shadow(0px 0px 8px #7f6400 ) drop-shadow(0px 0px 8px #7f6400 );
 }
 
 .academy-cards .card-body .title::before {
