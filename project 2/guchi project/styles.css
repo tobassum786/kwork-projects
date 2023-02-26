@@ -18,7 +18,7 @@
 }
 
 body {
-    
+
     color: var(--font-color);
     background-color: var(--base-color);
     box-sizing: inherit;
@@ -72,7 +72,7 @@ header {
 .navbar .navbar-items .nav-item {
     margin-left: 16px;
     font-size: 13px;
-    
+
 }
 
 .navbar .navbar-items li:nth-child(1) {
@@ -97,7 +97,7 @@ header {
 }
 
 
- .banner {
+.banner {
     position: relative;
     background: url(images/header.png);
     width: 100%;
@@ -126,14 +126,22 @@ header {
 
 /*intro section*/
 
+
 .intro {
     background: url(images/intro-section.png);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 74.688px;
     position: relative;
 }
+
+.intro-main-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .intro .intro-container .heading {
     color: var(--sec-color);
@@ -141,7 +149,7 @@ header {
 }
 
 .intro .intro-container {
-    width: 60%;
+    width: 55%;
     height: auto;
 }
 
@@ -149,8 +157,7 @@ header {
     font-size: 30px;
     font-weight: 300;
     text-transform: capitalize;
-    padding-bottom:
-        color: var(--sec-color);
+    color: var(--sec-color);
 }
 
 .text-content p {
@@ -160,13 +167,20 @@ header {
     letter-spacing: 1px;
 }
 
+.intro-main-container .stdio-container {
+    width: 382px;
+    margin-left: 15px;
+    margin-top: -20%;
+    right: 0;
+    top: -50%;
+}
+
+
 .video-container {
     width: 100%;
-    height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
-/*    background: white;*/
 }
 
 /*========studio video===========
@@ -179,43 +193,43 @@ header {
 
 .video-disclaim {
     position: relative;
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    text-align: center;
+    width: auto;
 
 }
 
 .video-disclaim .disclaimer {
-    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 76px 16px;
+    padding: 16px 0;
     line-height: 1.6;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     border-bottom: 2px solid var(--sec-color);
 }
 
 .video-disclaim .get-price {
+    padding-top: 24px;
     text-align: center;
-    width: 40%;
-    padding-top: 45px;
+    width: 100%;
 }
 
 .video-disclaim .get-price p {
-    font-size: 49px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 10px;
     color: var(--sec-color);
-    line-height: 1.7;
+    line-height: 1.2;
 }
 
 .video-disclaim .get-price .btn {
-    width: 90%;
-    height: 97px;
+    width: 100%;
+    height: 43px;
     border-radius: 10px;
     background: var(--gradients);
-    font-size: 30px;
+    font-size: px;
     text-transform: uppercase;
     font-weight: 600;
     outline: none;
@@ -226,32 +240,34 @@ header {
 .benefits-content-faq {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    margin: 76px 0;
+    margin: 76px 0 0 0;
 }
 
 /*gradients border*/
 .benefits-content-faq .benefit-container {
     position: relative;
     padding: 10px;
-    width: 60%;
+    width: 55%;
     background: var(--base-color);
     border-radius: 50px;
     margin: 5px;
 }
 
-.benefits-content-faq .benefit-container::after {
-    content: '';
+.benefits-content-faq .benefit-container::before{
+    content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    height: 50vh;
+    top: 0;
     right: 0;
-    bottom: 0;
-    z-index: -1;
-    margin: -5px;
-    border-radius: inherit;
-    background-image: linear-gradient(0deg, var(--base-color), var(--font-color));
+    bottom: -10px;
+    border-radius: 50px;
+    padding: 4px;
+    background: linear-gradient(0deg, var(--base-color) 60%, var(--font-color));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 }
 
 .benefits-content-faq .benefit-container .heading {
@@ -289,11 +305,9 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: -49px;
-    margin-left: 35px;
     line-height: 1.6;
+    margin: -75px 0 0 30px;
     width: 40%;
-
 }
 
 .benefits-content-faq .content-container h3 {
@@ -331,7 +345,7 @@ header {
     font-size: 18px;
     color: var(--sec-color);
     transition: .10s;
-    
+
 }
 
 .faq-container .drop-down:hover .faq-items {
@@ -443,7 +457,7 @@ header {
     background: -webkit-linear-gradient(var(--sec-color), var(--font-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 0px 8px #7f6400 ) drop-shadow(0px 0px 8px #7f6400 );
+    filter: drop-shadow(0px 0px 8px #7f6400) drop-shadow(0px 0px 8px #7f6400);
 }
 
 .academy-cards .card-body .title::before {
@@ -616,7 +630,7 @@ footer {
     section {
         padding: 0 50px
     }
-    
+
     header {
         margin: 0;
         padding: 0;
@@ -642,18 +656,18 @@ footer {
         left: 0;
     }
 
-    .navbar #menu li a  {
+    .navbar #menu li a {
         color: var(--font-color);
         font-size: 32px;
         padding-bottom: 20px;
         margin-bottom: 20px;
         line-height: 2;
     }
-    
+
     .navbar #menu li a:hover {
         color: var(--sec-color);
     }
-    
+
     .navbar {
         padding: 10px 30px;
         margin: 0;
@@ -680,7 +694,7 @@ footer {
         filter: invert(2);
         cursor: pointer;
     }
-    
+
     .banner p,
     .banner .banner-heading {
         padding: 10px 0 0 20px;
@@ -689,6 +703,8 @@ footer {
 
     .banner {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         text-align: left;
         height: 25vh;
@@ -697,18 +713,28 @@ footer {
     .intro {
         width: 100%;
     }
+    
+    .intro .intro-main-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+    }
+    
 
     .intro .intro-container {
         width: 100%;
+        flex: 0;
     }
     
-    .video-disclaim {
-        display: flex;
-        flex-direction: column;
+    .intro-main-container .stdio-container {
+        position: relative;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        margin-top: 5%;
     }
+
     .video-disclaim .disclaimer {
         width: 100%;
     }
@@ -736,7 +762,7 @@ footer {
         align-items: center;
         flex-wrap: wrap;
     }
-    
+
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
         display: none;
@@ -755,38 +781,35 @@ footer {
     }
 
     .banner {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: left;
         height: 25vh;
         width: 100%;
         padding: 10px;
     }
-    
+
     #menu {
         width: 100%;
         left: -640px;
     }
 
-    .banner p,
-    .banner .banner-heading {
-        padding: 0;
-        margin: 0;
-    }
-    
+
     header {
         width: 100%;
         padding: 0;
         margin: 0;
     }
-    
-    .navba{
+
+    .navbar {
         padding: 10px;
     }
 
     .logo {
         padding: 10px;
     }
-    
+
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
         display: none;
@@ -811,7 +834,7 @@ footer {
         width: 100%;
         padding: 10px;
     }
-    
+
     #menu {
         width: 100%;
         left: -414px;
@@ -822,11 +845,11 @@ footer {
         padding: 0;
         margin: 0;
     }
-    
+
     .banner .banner-heading {
         font-size: 32px;
     }
-    
+
     .banner p {
         font-size: 16px;
     }
@@ -899,7 +922,7 @@ footer {
     .benefits-content-faq .content-container .faq-container {
         width: 100%;
     }
-    
+
     .nftv-join-acadmey.nftive-main-container .nftive-container {
         width: 80%;
         display: none;
