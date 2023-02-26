@@ -720,13 +720,11 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        flex: 1;
     }
     
 
     .intro .intro-container {
         width: 100%;
-        flex: 0;
     }
     
     .intro-main-container .stdio-container {
@@ -765,7 +763,6 @@ footer {
 
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
-        display: none;
     }
 }
 
@@ -780,15 +777,6 @@ footer {
         padding: 100px 50px;
     }
 
-    .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-        height: 25vh;
-        width: 100%;
-        padding: 10px;
-    }
 
     #menu {
         width: 100%;
@@ -809,10 +797,13 @@ footer {
     .logo {
         padding: 10px;
     }
+    
+    .benefits-content-faq {
+        padding: 10px;
+    }
 
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
-        display: none;
     }
 
 }
@@ -828,22 +819,14 @@ footer {
     }
 
     .banner {
-        display: block;
         text-align: left;
         height: 25vh;
         width: 100%;
-        padding: 10px;
     }
 
     #menu {
         width: 100%;
         left: -414px;
-    }
-
-    .banner p,
-    .banner .banner-heading {
-        padding: 0;
-        margin: 0;
     }
 
     .banner .banner-heading {
@@ -923,9 +906,12 @@ footer {
         width: 100%;
     }
 
-    .nftv-join-acadmey.nftive-main-container .nftive-container {
-        width: 80%;
-        display: none;
+    .nftv-join-acadmey .nftive-main-container .nftive-container {
+        width: 100%;
+    }
+    
+    .nftive-main-container .nftive-container .heading h1 {
+        font-size: 32px;
     }
 
     footer {
