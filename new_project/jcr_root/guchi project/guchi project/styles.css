@@ -92,11 +92,6 @@ header {
     text-transform: capitalize;
 }
 
-.navbar .navbar-items .nav-item:hover {
-    color: var(--sec-color);
-}
-
-
  .banner {
     position: relative;
     background: url(images/header.png);
@@ -122,6 +117,11 @@ header {
     padding: 0 0 0 200px;
     font-size: 20px;
     font-weight: 100;
+}
+
+.active {
+    border-bottom: 2px solid var(--sec-color);
+    color: var(--sec-color);
 }
 
 /*intro section*/
