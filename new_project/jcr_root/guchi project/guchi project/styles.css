@@ -331,13 +331,8 @@ header {
     font-size: 18px;
     color: var(--sec-color);
     transition: .10s;
-    
-}
-
-.faq-container .drop-down:hover .faq-items {
-    display: block;
     cursor: pointer;
-    transition: .10s;
+    
 }
 
 .faq-container .drop-down {
@@ -351,6 +346,7 @@ header {
     font-size: 13px;
     margin-bottom: 10px;
     transition: .10s;
+    cursor: pointer;
 }
 
 .faq-container .drop-down h4 {
@@ -359,6 +355,11 @@ header {
 
 .faq-items {
     display: none;
+    
+}
+
+.drop-down.show .faq-items {
+    display: block;
     padding: 10px;
     transition: 2s;
 }
@@ -739,7 +740,6 @@ footer {
     
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
-        display: none;
     }
 }
 
@@ -789,7 +789,6 @@ footer {
     
     .nftv-join-acadmey .nftive-main-container .nftive-container {
         width: 80%;
-        display: none;
     }
 
 }
@@ -902,7 +901,6 @@ footer {
     
     .nftv-join-acadmey.nftive-main-container .nftive-container {
         width: 80%;
-        display: none;
     }
 
     footer {

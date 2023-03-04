@@ -8,15 +8,8 @@ function toggleMenu() {
 }
 
 
-//active-item-navbar
-//
-//const navIems = document.getElementsByClassName("nav-item");
-//
-//for(var i=0; i<navIems.length; i++){
-//    navIems[i].addEventListener('click', () =>{
-//        this.classList.add("active")
-//    })
-//}
+//active nav-item
+
 
 const mainMenu = document.getElementById("menu");
 const btns = mainMenu.getElementsByClassName("nav-item")
@@ -29,3 +22,16 @@ for (var i=0; i<btns.length; i++) {
     }) 
     
 }
+
+//faq-items 
+const dropBtns = document.querySelectorAll(".drop-down");
+
+dropBtns.forEach((evant) => {
+    evant.addEventListener("click", () => {
+        if (evant.classList.contains("show")){
+            evant.classList.remove("show");
+        } else {
+            evant.classList.add("show");
+        }
+    });
+});
