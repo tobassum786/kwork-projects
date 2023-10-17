@@ -1,0 +1,165 @@
+.services__container .card__list .services__card .lines {
+    visibility: hidden;
+    animation: hide 7s ease-out infinite;
+}
+
+.services__container .card__list .services__card .lines-up {
+    visibility: hidden;
+    animation-delay: 3s;
+}
+
+.services__container .card__list .services__card .lines-mid {
+    visibility: hidden;
+    animation-delay: 4s;
+}
+
+.services__container .card__list .services__card .lines-lower {
+    visibility: hidden;
+    animation-delay: 5s;
+}
+
+.services__container .card__list .services__card .lines-last {
+    visibility: hidden;
+    animation-delay: 6s;
+}
+
+@keyframes hide {
+    0%{
+        visibility: visible;
+        stroke: #63D26D;
+    }
+
+    50% {
+        visibility: hidden;
+        stroke: #63D26D;
+    }
+}
+
+.services__container .card__list .services__card .lines-1 {
+    animation: moveUpHide 3s ease-out infinite;
+    visibility: hidden;
+}
+
+@keyframes moveUpHide {
+    0% {
+        transform: translateY(120px);
+        visibility: visible;
+        stroke: #63D26D;
+    }
+    50% {
+        transform: translateY(0);
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(-30px);
+        visibility: hidden;
+        stroke: #63D26D;
+    }
+}
+
+.services__container .card__list .services__card .lines-2 {
+    visibility: hidden;
+    animation: showHide 3s ease-out infinite;
+    animation-delay: 4s;
+}
+
+@keyframes showHide {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+}
+
+.services__container .services__card .number,
+.services__container .services__card .connect-1,
+.services__container .services__card .connect,
+.services__container .services__card .wrong__send,
+.services__container .services__card .true__send {
+    visibility: hidden;
+    animation: showHide 3s ease-out infinite;
+}
+
+.services__container .services__card .wrong__send {
+    fill: #ff0000;
+}
+
+.services__container .services__card .true__send {
+    fill: #63D26D;
+}
+
+.services__container .services__card .connect {
+    stroke: #63D26D;
+}
+
+.services__container .services__card .connect-1 {
+    stroke: #63D26D;
+    animation-delay: 3s;
+}
+
+.services__container .services__card .envelop-2 {
+    animation: changeColor 4s ease-in infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        fill: #63D26D;
+    }
+}
+
+.services__container .services__card .envelop {
+    animation: changeColor2 4s ease-in infinite;
+}
+
+@keyframes changeColor2 {
+    0% {
+        fill: #ff0000;
+    }
+}
+
+.services__container .services__card .mail {
+    animation: changeColor 3.5s ease-in infinite;
+}
+
+.services__container .services__card .message {
+    animation: leftToRight 3s ease-in infinite;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30%);
+        animation-delay: 3s;
+    }
+
+    100% {
+        transform: translateX(65%);
+    }
+}
+
+.services__container .services__card .circle {
+    animation: rotate 3s ease-out infinite;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke-width: 40px;
+    stroke: #222725;
+}
+
+@keyframes rotate {
+        0% {
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-dashoffset: 200;
+            animation-delay: 5s;
+        }
+        100% {
+            stroke-dashoffset: 600;
+        }
+    }
