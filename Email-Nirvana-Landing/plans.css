@@ -70,6 +70,7 @@ section {
     border: 1px solid var(--secondary-color);
     box-shadow: -8px 8px 0px 0px var(--secondary-color);
     margin-top: 40px;
+    text-transform: capitalize;
 }
 
 /* Price plans */
@@ -164,6 +165,24 @@ section {
     font-size: 18px;
 }
 
+.signup {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    gap: 5px;
+}
+
+.signup p,
+.signup a {
+    color: var(--secondary-color);
+    font-size: var(--f-sm);
+    font-weight: 500;
+}
+
+.signup a {
+    text-decoration: underline;
+}
+
 @media (max-width: 990px) {
     section {
         padding: 50px;
@@ -173,3 +192,4 @@ section {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+

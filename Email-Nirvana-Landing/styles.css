@@ -22,7 +22,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-size: 62.5%;
+    font-size: vcalc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     background: var(--base-color);
     box-sizing: inherit;
 }
@@ -118,7 +118,7 @@ nav .toggle__menu {
     flex-wrap: wrap;
     background: url(./Images/hero.png) no-repeat top;
     background-position-y: -100px;
-    background-size: cover;
+    background-size: 100% auto;
     background-origin: border-box;
 }
 
@@ -243,7 +243,8 @@ nav .toggle__menu {
 }
 
 .product .product__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     justify-content: center;
     align-items: center;
     gap: 50px;
@@ -261,7 +262,7 @@ nav .toggle__menu {
 }
 
 .product .product__container .img__bx {
-    width: 200%;
+    width: 100%;
 }
 
 .product .product__container .product__content .product__heading {
@@ -317,7 +318,7 @@ nav .toggle__menu {
     justify-content: center;
     align-items: center;
     background: url(./Images/Rectangle\ 5.svg) no-repeat right;
-    background-size: 680px;
+    background-size: 50% auto;
     overflow: hidden;
 }
 
@@ -330,7 +331,7 @@ nav .toggle__menu {
     width: 100%;
     display: grid;
     position: relative;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
@@ -577,6 +578,10 @@ footer .copyright {
 
     .hero__container {
         max-width: 600px;
+    }
+
+    .hero__container .hero__title {
+        font-size: clamp(var(--f-sm), 4vw, var(--f-lg));
     }
 
     .hero .hero__about {
