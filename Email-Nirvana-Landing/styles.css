@@ -116,6 +116,7 @@ nav .toggle__menu {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     background: url(./Images/hero.png) no-repeat top;
     background-position-y: -100px;
     background-size: 100% auto;
@@ -203,7 +204,7 @@ nav .toggle__menu {
     background-color: var(--secondary-color);
 }
 
-.hero__container .hero__about {
+.hero__about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,26 +212,25 @@ nav .toggle__menu {
 }
 
 
-.hero__container .hero__about .card {
-    max-width: 600px;
+.hero__about .card {
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     border-right: 2px solid var(--secondary-color);
     padding: 10px 20px;
 }
 
-.hero__container .hero__about .card:last-child {
+.hero__about .card:last-child {
     border-right: none;
 }
 
-.hero__container .hero__about .card img {
+.hero__about .card img {
     width: 50px;
 }
 
-.hero__container .hero__about .card p {
-    width: 400px;
+.hero__about .card p {
     font-size: var(--f-sm);
 }
 
