@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    custom CSS-->
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <!--    Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <title>Exchange Form</title>
+</head>
+
+<body>
+    <!--   HEADER CONTAINER-->
+    <section class="container">
+        <div class="header_container">
+            <p class="header_heading"><strong>Calculator:</strong>Current BTC rate: <span>1,536,797,605</span></p>
+            <div class="header_form">
+                <!--               Crypto Currency types-->
+                <div class="h_crypto">
+                    <li>Choose a cryptocurrency</li>
+                    <!--                    gradient border-->
+                    <!--                    dropdown for selection of crypto currency-->
+                    <div class="crypto_dropdown">
+                        <span>
+                            <img src="./icons/BTC.png" alt="btc">
+                            <p>btc</p>
+                        </span>
+                        <input type="checkbox" id="h_toggle">
+                        <label for="h_toggle">
+                            <i class="bi bi-caret-down-fill"></i>
+                        </label>
+                        <div class="h_dropdown-menu">
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/TRX.png" alt="TRX">
+                                <p>trx</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/USDT.png" alt="usdt">
+                                <p>usdt</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/ETH.png" alt="eth">
+                                <p>eth</p>
+                            </a>
+                            <a href="#" class="menu_item">
+                                <img src="./icons/BTC.png" alt="btc">
+                                <p>btc</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--                Prices of different currencies-->
+                <div class="price">
+                    <p>price(CZK)</p>
+                    <div class="price_content fancy__border">
+                        <input type="text" value="1000">
+                        <div class="p_dropdown">
+                            <span>
+                                <i class="flag-icon flag-icon-cz flag-icon-circle"></i>
+                            </span>
+                            <input type="checkbox" id="price_bx">
+                            <label for="price_bx">
+                                <i class="bi bi-caret-down-fill"></i>
+                            </label>
+                            <div class="p_down-menu">
+                                <a href="#">
+                                    <span>
+                                        <i class="flag-icon flag-icon-cz flag-icon-circle"></i>
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span>
+                                        <i class="flag-icon flag-icon-eu flag-icon-circle"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                Amount of the Bitcoin-->
+                <div class="amount">
+                    <p>Amount of BTC</p>
+                    <div class="amount_content fancy__border">
+                        <div class="btc_amount">
+                            <span>
+                                <img src="./icons/BTC.png" alt="btc">
+                            </span>
+                            <input type="text" value="0.00006506">
+                        </div>
+                        <input type="checkbox" id="amount_chk">
+                        <label for="amount_chk">
+                            <i class="bi bi-caret-down-fill"></i>
+                        </label>
+                    </div>
+                </div>
+                <!--                BUY & SELL options-->
+                <form action="#">
+                    <p>
+                        <input type="radio" id="buy" name="radio-group" checked>
+                        <label for="buy">buy</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="sell" name="radio-group">
+                        <label for="sell">sell</label>
+                    </p>
+                </form>
+                <button class="btn header_btn">continue..</button>
+            </div>
+        </div>
+    </section>
+    <!--    DEVELOPMENT & EXCHANGE DATA CONATAINER-->
+    <section class="development_exchange">
+        <!--        main container-->
+        <div class="main_container">
+            <p class="heading">Buy Bitcoin (BTC)</p>
+            <!--        divider-->
+            <div class="divider"></div>
+            <div class="development_form">
+                <!--           EXCHANGE DATA-->
+                <div class="exchange">
+                    <p class="heading">exchange data</p>
+                    <div class="ex_form-data">
+                        <!--                        ORDER TYPE-->
+                        <div class="data_input">
+                            <span for="order">order type:</span>
+                            <div class="order_dropdown fancy__border">
+                                <span>buy</span>
+                                <input type="checkbox" id="order_chk">
+                                <label for="order_chk">
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </label>
+                                <div class="order_menu">
+                                    <a href="#">buy</a>
+                                    <a href="#">sell</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        RECEIVEING DATA-->
+                        <div class="data_input">
+                            <span class="receive">i will receive:</span>
+                            <div class="receive_data">
+                                <input type="text" value="0.00006506" class="fancy__border">
+                                <div class="receive_dropdown fancy__border">
+                                    <img src="./icons/btc.png" alt="btc">
+                                    <p class="text">btc</p>
+                                    <input type="checkbox" id="receive_chk">
+                                    <label for="receive_chk">
+                                        <i class="bi bi-caret-down-fill"></i>
+                                    </label>
+                                    <div class="receive_dropdown-menu">
+                                        <a href="#">
+                                            <img src="./icons/btc.png" alt="btc">
+                                            <p class="text">btc</p>
+                                        </a>
+                                        <a href="#">
+                                            <img src="./icons/trx.png" alt="trx">
+                                            <p class="text">trx</p>
+                                        </a>
+                                        <a href="#">
+                                            <img src="./icons/eth.png" alt="eth">
+                                            <p class="text">eth</p>
+                                        </a>
+                                        <a href="#">
+                                            <img src="./icons/usdt.png" alt="ustd">
+                                            <p class="text">usdt</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        CHECK AMOUNT-->
+                        <div class="data_input">
+                            <span class="receive">the check, please:</span>
+                            <div class="receive_data">
+                                <input type="text" value="0.00006506" class="fancy__border">
+                                <div class="receive_dropdown fancy__border">
+                                    <i class="flag-icon flag-icon-cz flag-icon-circle"></i>
+                                    <p class="text">CZK</p>
+                                    <input type="checkbox" id="check_chk">
+                                    <label for="check_chk">
+                                        <i class="bi bi-caret-down-fill"></i>
+                                    </label>
+                                    <div class="check_dropdown-menu">
+                                        <a href="#">
+                                            <i class="flag-icon flag-icon-cz flag-icon-circle"></i>
+                                            <p class="text">CZK</p>
+                                        </a>
+                                        <a href="#">
+                                            <i class="flag-icon flag-icon-eu flag-icon-circle"></i>
+                                            <p class="text">EU</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        EMAIL-->
+                        <div class="data_input">
+                            <span class="email">email:</span>
+                            <div class="email_data fancy__border">
+                                <i class="bi bi-envelope"></i>
+                                <input type="email" autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="btc_price">
+                            <p>1 BTC = <span>1,535,609,354 CZK</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--            COURSE DEVELOPMENT-->
+                <div class="course_development">
+                    <p class="heading">Course development:</p>
+                    <div class="chart_img">
+                        <img src="./Chart.svg" alt="chart">
+                    </div>
+                </div>
+            </div>
+            <!--            MARKET SELL AND BUY OPTIONS-->
+            <div class="market_container">
+                <div class="market">
+                    <div class="market_data fancy__border">
+                        <div class="market_select">
+                            <p class="market_option">
+                                <input type="radio" id="buy" name="radio-group" checked>
+                                <label for="buy">
+                                    <div class="m_text-content">
+                                        <h3>Market rate</h3>
+                                        <p>Instant purchase. The exact amount will depend on the exchange rate at the time of purchase.</p>
+                                    </div>
+                                </label>
+                            </p>
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                    <!--                OPTION TWO DISABLE-->
+                    <div class="market_data fancy__border">
+                        <div class="market_select disable">
+                            <p class="market_option">
+                                <input type="radio" name="styles" id="default" checked>
+                                <label for="default">
+                                    <div class="m_text-content">
+                                        <h3>Current course</h3>
+                                        <p>Fixed rate. If the market rate moves quickly, the order may not be executed.</p>
+                                    </div>
+                                </label>
+                            </p>
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--                OPTION three DISABLE-->
+                <p class="heading">Payment</p>
+                <div class="payment market">
+                    <div class="market_data fancy__border">
+                        <div class="market_select">
+                            <p class="market_option">
+                                <input type="radio" id="buy" name="radio-group" checked>
+                                <label for="buy">
+                                    <div class="m_text-content">
+                                        <h3>From My Anycoin Account</h3>
+                                        <p>free, instant, for registered users only.</p>
+                                    </div>
+                                </label>
+                            </p>
+
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                    <div class="market_data fancy__border">
+                        <div class="market_select disable">
+                            <p class="market_option">
+                                <input type="radio" id="buy" name="radio-group" checked>
+                                <label for="buy">
+                                    <div class="m_text-content">
+                                        <h3>From My Anycoin Account</h3>
+                                        <p>free, instant, for registered users only.</p>
+                                    </div>
+                                </label>
+                            </p>
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--                OPTION three DISABLE-->
+                <p class="heading">Where to send cryptocurrency</p>
+                <div class="payment market">
+                    <div class="market_data fancy__border">
+                        <div class="market_select">
+                            <p class="market_option">
+                                <input type="radio" id="buy" name="radio-group" checked>
+                                <label for="buy">
+                                    <div class="m_text-content">
+                                        <h3>Keep in Anycoin account</h3>
+                                        <p>for registered users only.</p>
+                                    </div>
+                                </label>
+                            </p>
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                    <div class="market_data fancy__border">
+                        <div class="market_select disable">
+                            <p class="market_option">
+                                <input type="radio" id="buy" name="radio-group" checked>
+                                <label for="buy">
+                                    <div class="m_text-content">
+                                        <h3>Send to my cryptocurrency wallet</h3>
+                                        <p>fee 0.00003 BTC.</p>
+                                    </div>
+                                </label>
+                            </p>
+                        </div>
+                        <span class="icon">
+                            <i class="bi bi-question"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="wallet_address">
+                    <div class="wallet_content">
+                        <p class="heading">Wallet address:</p>
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                    <input type="email" class="fancy__border">
+                    <div class="wallet_btn">
+                        <button class="btn">bitcoin</button>
+                        <p>Fee: 0.00003 BTC</p>
+                    </div>
+                </div>
+                <div class="info_content">
+                    <i class="bi bi-question-circle"></i>
+                    <p>Cryptocurrency withdrawals are limited for new users for security reasons. The limits are 1,000 CZK / 14 days and 5,000 CZK / 30 days from the first deposit. Your cryptocurrencies are safe and withdrawals exceeding the limits will be completed after the trial period. You can cancel these limits by verifying your account.</p>
+                </div>
+                <div class="agreements">
+                    <span class="agree">
+                        <input type="checkbox" class="checkbox">
+                        <label for="">I agree with the conditions</label>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    <span class="agree">
+                        <input type="checkbox" class="checkbox">
+                        <label for="">I want to receive news about news, product changes and business offers</label>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    <button class="btn offer_btn">create an offer</button>
+                </div>
+            </div>
+            <div class="popup_wrapper">
+                <div class="popup_content">
+
+                    <button class="bi bi-x-square-fill close_btn"></button>
+                    <div class="popup_data">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <h3>SUCCESS</h3>
+                        <h2>Your order is processed</h2>
+                        <p>We will write you email shortly with progress</p>
+                        <button class="btn popup_btn">Thanks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

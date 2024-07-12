@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+:root {
+    --f-xlg: 25px;
+    --f-lg: 16px;
+    --f-sm: 14px;
+    --f-xsm: 11px;
+    /*    color*/
+    --base-clr: #181818;
+    --f-clr: #FFFFFF;
+    --gradient: linear-gradient(90.00deg, rgb(93, 60, 201), rgb(59, 221, 233) 100%);
+    --secondary-clr: rgb(15, 12, 27);
+}
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    font-size: 62.5%;
+    box-sizing: inherit;
+    font-family: inherit;
+    color: var(--f-clr);
+}
+
+.fancy__border {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient);
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    padding: 0 16px;
+    border-radius: 5px;
+    background: var(--gradient);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: var(--txt-clr);
+
+    /*button hover*/
+    &:hover {
+        opacity: .8;
+    }
+}
+
+a,
+ul,
+li {
+    text-decoration: none;
+    list-style: none;
+    color: var(--txt-clr);
+}
+
+input,
+select {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+section {
+    padding: 100px;
+}
+
+/*header contaitner*/
+
+.header_container {
+    position: relative;
+    width: min(100%, 1000px);
+    background: var(--base-clr);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.header_container .header_heading {
+    font-size: var(--f-sm);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header_container .header_heading span {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/*header dropdown menu styling*/
+.container .header_container .header_form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+/*heading*/
+.header_container .header_form .h_crypto li {
+    list-style: decimal inside;
+    font-size: var(--f-sm);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+/*header dropdown*/
+
+.header_container .header_form .h_crypto .crypto_dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient);
+    padding: 5px;
+}
+
+.header_container .header_form .h_crypto .crypto_dropdown span {
+    display: flex;
+    align-items: center;
+
+    & img {
+        width: 18px;
+        height: 18px;
+    }
+
+    & p {
+        text-transform: uppercase;
+        font-size: var(--f-sm);
+        padding-left: 8px;
+    }
+}
+
+/*MAKE CHECKBOX FUNCTIONAL*/
+input[type="checkbox"] {
+    display: none;
+    user-select: none;
+}
+
+.header_container .header_form .h_crypto .crypto_dropdown input[type="checkbox"]:checked ~ .h_dropdown-menu {
+    display: block;
+    z-index: 1;
+}
+
+/*dropdown list */
+
+.header_container .header_form .h_crypto .crypto_dropdown .h_dropdown-menu {
+    position: absolute;
+    top: 130px;
+    left: 25px;
+    background: var(--base-clr);
+    width: 200px;
+    border-radius: 5px;
+    display: none;
+}
+
+.header_container .header_form .h_crypto .crypto_dropdown .h_dropdown-menu a {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    padding: 8px;
+}
+
+.header_container .header_form .h_crypto .crypto_dropdown .h_dropdown-menu a img {
+    width: 18px;
+}
+
+
+.header_container .header_form .h_crypto .crypto_dropdown .h_dropdown-menu a p {
+    font-size: var(--f-sm);
+    text-transform: uppercase;
+    padding-left: 8px;
+}
+
+/*Price of diffrent currencies*/
+
+.header_container .header_form .price p {
+    font-size: var(--f-sm);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.header_container .header_form .price .price_content {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 5px;
+
+    & input {
+        color: var(--f-txt);
+        font-size: var(--f-sm);
+        max-width: 140px;
+    }
+}
+
+.header_container .header_form .price .price_content .p_dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+}
+
+.header_container .header_form .price .price_content .p_dropdown span {
+    width: 15px;
+    height: 15px;
+}
+
+.header_container .header_form .price .price_content .p_dropdown .flag-icon-circle {
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.header_container .header_form .price .price_content .p_dropdown .p_down-menu {
+    position: absolute;
+    top: 25px;
+    width: 50px;
+    background: var(--base-clr);
+    padding: 8px;
+    line-height: 2.5;
+    display: none;
+    border-radius: 8px;
+}
+
+.header_container .header_form .price .price_content .p_dropdown .p_down-menu a {
+    padding-bottom: 8px;
+}
+
+.header_container .header_form .price .price_content .p_dropdown input[type="checkbox"]:checked ~ .p_down-menu {
+    display: block;
+    z-index: 1;
+}
+
+/*Amount of the Bitcoin*/
+.amount p {
+    color: var(--f-clr);
+    font-size: var(--f-sm);
+    margin-bottom: 8px;
+}
+
+.amount .amount_content {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 200px;
+}
+
+.amount .amount_content .btc_amount {
+    display: flex;
+    align-items: center;
+}
+
+.amount .amount_content .btc_amount span {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.amount .amount_content .btc_amount input {
+    color: var(--f-clr);
+}
+
+/*BUY and SELL Options*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: var(--f-clr);
+    text-transform: capitalize;
+    font-size: var(--f-sm);
+    margin-bottom: 5px;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #3BDDE9;
+    border-radius: 100%;
+    background: var(--base-clr);
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #3BDDE9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*********DEVELOPMENT AND EXCHANGE******/
+.developemtn_exchange {
+    position: relative;
+}
+
+.development_exchange .main_container {
+    position: relative;
+    background: var(--base-clr);
+    padding: 24px 50px;
+    width: min(100%, 1000px);
+    border-radius: 10px;
+}
+
+.development_exchange .main_container .heading {
+    font-size: var(--f-xlg);
+    padding: 16px 0;
+    text-transform: capitalize;
+}
+
+/*divider*/
+.development_exchange .main_container .divider {
+    width: 100%;
+    height: 2px;
+    background-color: hsl(from var(--f-clr) h s 50%);
+}
+
+/*DEVELOPMENT FORM STYLING*/
+.development_exchange .development_form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.development_exchange .development_form .exchange .heading {
+    margin-bottom: 24px;
+}
+
+.development_exchange .development_form .ex_form-data .data_input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: min(100%, 450px);
+    margin-bottom: 16px;
+    gap: 24px;
+
+}
+
+.development_exchange .development_form .ex_form-data .data_input .order_dropdown {
+    position: relative;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    align-items: center;
+}
+
+.development_exchange .development_form .ex_form-data .data_input .order_dropdown span {
+    color: var(--f-clr);
+    text-transform: capitalize;
+    font-size: var(--f-sm);
+}
+
+.development_exchange .development_form .ex_form-data .data_input span {
+    width: 100px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: var(--f-xsm);
+    color: hsl(from var(--f-clr) h s 50%);
+}
+
+.development_exchange .development_form .ex_form-data .data_input .order_menu {
+    position: absolute;
+    width: 180px;
+    background: var(--base-clr);
+    top: 35px;
+    left: 0;
+    display: none;
+    border-radius: 5px;
+}
+
+.development_exchange .development_form .ex_form-data .data_input .order_menu a {
+    font-size: var(--f-sm);
+    text-transform: capitalize;
+    padding: 8px;
+}
+
+.development_exchange .development_form .ex_form-data .data_input .order_dropdown input[type="checkbox"]:checked ~ .order_menu {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/*REVEING DATA*/
+.receive_data {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.receive_data input {
+    padding: 8px;
+    color: var(--f-clr);
+    font-size: var(--f-sm);
+    width: 120px;
+}
+
+/*RECEIVE DROPDOWN*/
+.receive_data .receive_dropdown {
+    position: relative;
+    width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.receive_data .receive_dropdown .text {
+    padding-left: 5px;
+    font-size: var(--f-sm);
+    text-transform: uppercase;
+}
+
+.receive_data .receive_dropdown i {
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.receive_data .receive_dropdown img {
+    width: 16px;
+}
+
+/*dropdown toggle*/
+.receive_data .receive_dropdown .receive_dropdown-menu {
+    position: absolute;
+    width: 120px;
+    background-color: var(--base-clr);
+    top: 35px;
+    left: 0;
+    display: none;
+}
+
+.receive_data .receive_dropdown .check_dropdown-menu a,
+.receive_data .receive_dropdown .receive_dropdown-menu a {
+    display: flex;
+    padding: 8px;
+}
+
+.receive_data .receive_dropdown .check_dropdown-menu a i {
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.receive_data .receive_dropdown .receive_dropdown-menu a img {
+    width: 16px;
+}
+
+.receive_data .receive_dropdown input[type="checkbox"]:checked ~ .check_dropdown-menu,
+.receive_data .receive_dropdown input[type="checkbox"]:checked ~ .receive_dropdown-menu {
+    display: block;
+    z-index: 1;
+}
+
+/*CHECK AMOUNT*/
+.receive_data .receive_dropdown .check_dropdown-menu {
+    position: absolute;
+    width: 120px;
+    background-color: var(--base-clr);
+    top: 40px;
+    left: 0;
+    display: none;
+}
+
+/*EMAIL DATA*/
+.data_input .email_data {
+    padding: 8px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.data_input .email_data i {
+    font-size: var(--f-sm);
+}
+
+.data_input .email_data input[type="email"] {
+    color: var(--f-clr);
+    padding-left: 8px;
+    width: inherit;
+}
+
+
+.btc_price {
+    padding: 16px 0;
+}
+
+.btc_price p {
+    font-size: var(--f-lg);
+}
+
+.btc_price p span {
+    background: var(--gradient);
+    -webkit-backgroung-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 800;
+}
+
+/*CHART DEVELOPMENT*/
+
+.development_form .course_development {
+    position: relative;
+    width: min(100%, 450px);
+}
+
+.development_form .course_development .chart_img {
+    max-width: 100%;
+}
+
+.development_form .course_development .chart_img img {
+    width: 100%;
+}
+
+/*MARKET SELL AND BUY OPTIONS*/
+.market_container .market {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.market_container .market .market_data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 430px);
+    padding: 16px;
+}
+
+.market_container .market .market_data .market_select {
+    display: flex;
+    align-items: center;
+
+}
+
+.m_text-content {
+    color: hsl(from var(--f-clr) h s 50%);
+    text-wrap: wrap;
+}
+
+.m_text-content h3 {
+    font-size: var(--f-lg);
+    padding-bottom: 8px;
+}
+
+.m_text-content p {
+    font-size: var(--f-sm);
+}
+
+.market_data .market_select .market_option > input[type="radio"]:checked,
+.market_data .market_select .market_option[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.market_data .market_select > .market_option > input[type="radio"]:checked + label:before,
+.market_data .market_select > .market_option > input[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3BDDE9;
+    border-radius: 100%;
+    background: var(--base-clr);
+}
+
+.market_data .market_select .market_option > input[type="radio"]:checked + label:after,
+.market_data .market_select .market_option > input[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #5D3CC9;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+
+.market_container .market .market_data span {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #3BDDE9;
+}
+
+.market_container .market .market_data span i {
+    font-size: var(--f-xlg);
+    color: #5D3CC9;
+}
+
+/*AFTER ALL STYLING ABOUT DETAILS*/
+
+.market_container .wallet_address .wallet_content {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.market_container .wallet_address .heading {
+    font-size: var(--f-sm);
+    font-weight: 700;
+}
+
+.market_container .wallet_address i {
+    font-size: var(--f-sm);
+    margin-left: 16px;
+    padding: 16px;
+}
+
+.market_container .wallet_address input {
+    width: min(100%, 500px);
+    padding: 8px;
+    color: var(--f-clr);
+    font-size: var(--f-sm);
+}
+
+.market_container .wallet_address .wallet_btn {
+    margin-top: 24px;
+}
+
+
+.market_container .wallet_address .wallet_btn p {
+    font-size: var(--f-xsm);
+    padding-top: 8px;
+}
+
+.market_container .info_content {
+    width: min(100%, 450px);
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    background-color: #0F0C1B;
+    line-height: 1.6;
+}
+
+.market_container .info_content i {
+    font-size: var(--f-lg);
+}
+
+.market_container .agreements {
+    margin-top: 16px;
+}
+
+.market_container .agreements .agree {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.market_container .agreements .agree > input[type="checkbox"] {
+    display: block;
+}
+
+.market_container .agreements .agree > .checkbox {
+    -webkit-appearance: none;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background: #f8f7f7;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.market_container .agreements .agree > .checkbox:checked {
+    background: linear-gradient(180.00deg, rgb(93, 60, 201), rgb(59, 221, 233) 100%);
+}
+
+.market_container .agreements .agree > .checkbox::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url(../icons/check2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.market_container .agreements .agree > .checkbox::before {
+    display: none;
+}
+
+.market_container .agreements .agree > .checkbox::before {
+    display: block;
+}
+
+.market_container .agreements .agree label {
+    font-size: var(--f-xsm);
+}
+
+.market_container .agreements .agree i {
+    margin-left: 16px;
+}
+
+.market_container .agreements .offer_btn {
+    width: 200px;
+    margin-top: 24px;
+}
+
+/*POPUP MODEL */
+.popup_wrapper {
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#fff, 0, 0);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    z-index: 999;
+    display: none;
+}
+
+.popup_wrapper .popup_content {
+    position: relative;
+    width: 550px;
+    height: 350px;
+    border-radius: 20px;
+    background: var(--f-clr);
+}
+
+.popup_wrapper .popup_content > * {
+    color: var(--base-clr);
+    text-align: center;
+}
+
+.popup_wrapper .popup_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_wrapper .popup_content .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #020024;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--f-lg);
+}
+
+.popup_wrapper .popup_content .popup_data i {
+    font-size: calc(1.5 * var(--f-xlg));
+    color: #41F774;
+}
+
+.popup_wrapper .popup_content .popup_data h3 {
+    font-size: var(--f-xlg);
+    color: #41F774;
+}
+
+.popup_wrapper .popup_content .popup_data h2 {
+    font-size: var(--f-xlg);
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.popup_wrapper .popup_content .popup_data p {
+    font-size: var(--f-lg);
+    font-weight: 500;
+    margin: 8px;
+}
+
+.popup_wrapper .popup_content .popup_data .popup_btn {
+    width: 250px;
+    font-size: var(--f-lg);
+    font-weight: 600;
+    color: var(--f-clr);
+}

@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary-clr: #FFFFFF;
+    --secondary-clr: rgba(217, 217, 217, 0.2);
+    --bg-clr: #050508;
+    --bg-g: linear-gradient(90.00deg, rgb(91, 63, 202),rgb(57, 221, 233) 100%);
+    --h-f: 'Encode Sans Semi Condensed', sans sarif;
+    --p-f: 'Jost', sans sarif;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--p-f);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-clr);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%
+}
+
+a, ul, li {
+    text-decoration: none;
+    list-style: none;
+    color: var(--primary-clr);
+}
+
+section {
+    padding: 50px 100px;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 8px 16px;
+    background: var(--bg-g);
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-family: 'jost', sans-serif;
+    font-weight: 500;
+    color: var(--primary-clr);
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+::placeholder {
+    text-transform: capitalize;
+}
+
+.d-none {
+    display: none;
+}
+
+.fancy__border {
+    position: relative;
+}
+
+.fancy__border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: var(--bg-g);
+    z-index: -1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/*nav-bar*/
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    position: relative; 
+    height: 90px;
+}
+
+.nav-bar .logo {
+    width: 100px;
+    padding: 0 4px;
+    height: auto;
+    display: block;
+    font-size: clamp()
+}
+
+.nav-bar .logo img {
+    width: 100%;
+}
+
+.nav-bar .nav__items {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-bar .nav__items li {
+/*    border: 1px solid white;*/
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.nav-bar .nav__items li a {
+    transition: .5s;
+}
+
+.nav-bar .nav__items li a:hover {
+    opacity: .7;
+}
+
+nav .toggle__menu {
+    display: none;
+}
+
+/*hero*/
+
+.hero {
+    position: relative;
+}
+
+.hero .hero__content {
+    background: var(--bg-g);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero .hero__content .hero__text {
+    padding: 50px 25px;
+    color: var(--primary-clr);
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 680px;
+}
+
+.hero .hero__content .hero__text .heading {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--h-f);
+    line-height: 49px;
+    color: var(--primary-clr);
+    padding-bottom: 5px;
+}
+
+.hero .hero__content .hero__text .text {
+    padding-bottom: 5px;
+}
+
+.hero .hero__content .hero__text span {
+    color: rgb(255, 187, 81);
+}
+
+.hero .hero__content .hero__text .hero__btn {
+    background: var(--primary-clr);
+    color: var(--bg-clr);
+    margin-top: 30px;
+}
+
+.hero .hero__content .hero__img {
+    align-content: flex-end;
+    padding: 0 8px;
+    max-width: 450px;
+}
+
+.hero .hero__content .hero__img img {
+    width: 100%;
+}
+
+/*App download info*/
+
+.d__wallet {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+    gap: 24px;
+}
+
+.d__wallet .d_content {
+    padding: 50px 40px;
+    border-radius: 12px;
+    background: rgba(217, 217, 217, 0.2);
+}
+
+.d__wallet .d_content .heading {
+    font-size: 24.8px;
+    color: var(--primary-clr);
+    font-weight: 600;
+    font-family: var(--h-f);
+    padding-bottom: 30px;
+}
+
+.d__wallet .d_content li {
+    list-style: decimal inside;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+
+.d__wallet .d_btn_wrap {
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 230px;
+    box-sizing: border-box;
+    display: flex;
+    justify-items: left;
+    gap: 16px;
+    height: fixed;
+}
+
+.d__wallet .d_btn_wrap .d_btn {
+    width: 110px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.d__wallet .d_btn_wrap .btn_secondary {
+    background: none;
+    text-transform: uppercase;
+    color: var(--primary-clr);
+}
+
+.d__wallet .d_content .d_app {
+    margin-top: 45px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.d__wallet .d_m_img {
+    background: linear-gradient(180.00deg, rgb(91, 63, 202),rgb(57, 221, 233) 100%);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Information card*/
+
+.card_contianer {
+    position: relative;
+}
+
+.card_contianer .card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card_contianer .card__wrapper .card_body {
+    background: rgba(217, 217, 217, 0.2);
+    width: 270px;
+    border-radius: 12px;
+    padding: 30px 36px 10px;
+}
+
+.card_contianer .card__wrapper .card_body .card_content .heading {
+    font-size: 25px;
+    color: var(--primary-clr);
+    padding-bottom: 8px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.card_contianer .card__wrapper .card_body .card_content .text {
+    font-size: 10.5px;
+    color: var(--primary-clr);
+}
+
+.card_contianer .card__wrapper .card_body .card_content .card_img {
+    margin-top: 30px;
+}
+
+.card_contianer .card__wrapper .card_body .card_content .card_img img {
+    object-fit: fill;
+}
+
+.secure_info {
+    position: relative;
+}
+
+.secure_info .heading {
+    font-size: 61px;
+    color: var(--primary-clr);
+    font-family: var(--h-f);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.secure_info .text {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-clr);
+    text-align: center;
+}
+
+.faq__list {
+    margin-top: 30px;
+}
+
+.accordion {
+    margin: 1rem 0;
+}
+
+details{
+  background-color: rgba(217, 217, 217, 0.1);
+  color: var(--primary-clr);
+  font-size: 18px;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+    font-size: 21px;
+  justify-content: space-between;  
+  transition: height 1s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after{
+    content: "\002B";
+    font-size: 21px;
+}
+
+details[open] summary {
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+  content: "\2212";
+    font-size: 21px;
+}
+
+details[open] div{
+  padding: .5em 1em;
+}
+
+details[open] div li {
+    list-style: outside;
+    padding: 0.5rem;
+}
+
+details[open] div li a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/*download application*/
+
+.d_app_container {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    background: var(--bg-g);
+    padding: 0 100px;
+/*    height: 63vh;*/
+}
+
+.d_app_container .heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-clr);
+}
+
+.d_app_container .btn-secondary {
+    padding: 11px 39px;
+    background: var(--primary-clr);
+    color: var(--bg-clr);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.d_app img {
+    width: 55%;
+    object-fit: contain;
+}
+/* FAQs*/
+
+.faqs {
+    position: relative;
+}
+
+.faqs .text__content {
+    text-align: center;
+}
+
+.faqs .text__content .heading span {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--f-h);
+    color: rgb(2, 122, 219);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.faqs .text__content .heading {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: var(--primary-clr);
+}
+
+/*Footer*/
+
+footer {
+    padding: 100px;
+    position: relative;
+    background: url(../Images/curve.svg) no-repeat;
+    background-color: #303030;
+    background-size: 100% 15%;
+    z-index: 1;
+}
+
+footer .ft_main-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .ft_main-row .logo {
+    width: 250px;
+    align-self: center;
+    margin-right: 32px;
+}
+
+footer .ft_main-row .heading {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
+
+footer .ft_main-row li {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+}
+
+.ft_row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 100px;
+    gap: 54px;
+}
+
+.ft_row .heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-clr);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    font-family: var(--h-f);
+}
+
+.ft_row .btn_row .ft_btn {
+    padding: 16px 32px;
+    background: none;
+    border-radius: 20px;
+    color: var(--primary-clr);
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.ft_row .btn_row .ft_btn i {
+    padding-left: 8px;
+}
+
+.ft_row .social_icons {
+    align-self: center;
+}
+
+.ft_row .social_icons .icons{
+    display: inline-flex;
+    font-size: 20px;
+    gap: 16px;
+}
+/*Responsive */
+
+@media (max-width: 991px) {
+    .nav-bar {
+        padding: 50px 50px;
+    }
+    
+    .hero .hero__content {
+        justify-content: flex-start;
+    }
+    
+    .hero .hero__text .heading {
+        text-align: left;
+        padding: 25px 15px;
+    }
+    
+    #menu {
+        position: absolute;
+        top: 95px;
+        display: block;
+        width: 20rem;
+        left: 5px;
+        background: #303030;
+        padding: 50px;
+        text-align: center;
+        z-index: 999;
+        display: none;
+    }
+    
+    #menu.activated {
+        display: block;
+    }
+    
+    nav > .nav__items {
+        justify-content: center;
+        display: block;
+    }
+    
+    nav > .nav__items > li {
+        margin-bottom: 16px;
+    }
+    
+    .toggle__icons {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: none;
+    }
+
+    .toggle__icons.activated .open__menu {
+        display: none;
+    }
+    .toggle__icons.activated .close__menu {
+        display: block;
+    }
+
+    nav .toggle__menu {
+        display: block;
+    }
+
+    nav .toggle__menu i {
+        font-size: 2rem;
+        color: var(--primary-clr);
+    }
+
+    .close__menu {
+        display: none;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+    
+    .card_contianer .card__wrapper .card_body {
+        width: 350px;
+    }
+    
+    .d__wallet {
+        grid-template-columns: auto;
+    }
+    
+    .secure_info .heading {
+        font-size: 38px;
+        text-align: left;
+    }
+    
+    .secure_info .text {
+        text-align: left;
+    }
+    
+    .d_app_container {
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .ft_main-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ft_main-row .row {
+        flex-wrap: wrap;
+    }
+    
+    footer {
+        padding: 50px;
+        position: relative;
+        background: url(../Images/curve.svg) no-repeat;
+        background-color: #303030;
+        background-size: 100% 5%;
+        z-index: 1;
+    }
+    
+    .ft_main-row .row {
+        justify-content: flex-start;
+    }
+    
+    .ft_row .cta {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(300px, 2fr);
+        justify-content: center;
+        
+    }
+}
+
+@media (max-width: 414px) {
+    .ft_section {
+       padding: 25px; 
+    }
+    
+    .ft_main-row  {
+        display: grid;
+        grid-template-columns: repeat(100px, 1fr);
+        justify-content: flex-start;
+    }
+    
+    .ft_main-row .row {
+        justify-content: flex-start;
+    }
+    
+    .ft_row,
+    .ft_row .cta {
+        padding: 0;
+    }
+    
+    .ft_row .cta {
+        text-align: center;
+    }
+    
+    .ft_row .cta .btn_row {
+        display: flex;
+        font-size: 12px;
+    }
+}
